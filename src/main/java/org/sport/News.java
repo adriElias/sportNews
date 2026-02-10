@@ -3,13 +3,13 @@ package org.sport;
 public abstract class News {
     private String headline;
     private String text = "";
-    private double scaring;
+    private double scoring;
     private double price;
 
-    public News(String headline, String text, double scaring, double price) {
+    public News(String headline, String text, double scoring, double price) {
         this.headline = headline;
         this.text = text;
-        this.scaring = scaring;
+        this.scoring = scoring;
         this.price = price;
 
     }
@@ -22,12 +22,12 @@ public abstract class News {
         this.text = text;
     }
 
-    public double getScaring() {
-        return scaring;
+    public double getScoring() {
+        return scoring;
     }
 
-    public void setScaring(double scaring) {
-        this.scaring = scaring;
+    public void setScoring(double scoring) {
+        this.scoring = scoring;
     }
 
     public double getPrice() {
@@ -45,4 +45,6 @@ public abstract class News {
     public void setHeadline(String headline) {
         this.headline = headline;
     }
+
+    public abstract double calculatePriceNews();
 }
