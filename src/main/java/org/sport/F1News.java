@@ -7,4 +7,16 @@ public class F1News extends News {
         super(headline, text, scoring, price);
         this.motorRacingTeam = motorRacingTeam;
     }
+
+    @Override
+    public double calculatePriceNews() {
+        double price = 100;
+        if (motorRacingTeam.equalsIgnoreCase("Ferrari") ||
+                motorRacingTeam.equalsIgnoreCase("Mercedes")) {
+            price += 50;
+        }
+
+        return price;
+
+    }
 }
