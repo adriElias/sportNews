@@ -9,4 +9,18 @@ public class TennisNews extends News {
         this.competition = competition;
         this.tennisPlayers = tennisPlayers;
     }
+
+    @Override
+    public double calculatePriceNews() {
+        double price = 150;
+        if (tennisPlayers.equalsIgnoreCase("Federer") ||
+            tennisPlayers.equalsIgnoreCase("Nadal") ||
+            tennisPlayers.equalsIgnoreCase("Djokovic")) {
+
+            price += 100;
+        }
+
+        return price;
+
+    }
 }
