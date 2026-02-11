@@ -1,0 +1,38 @@
+package org.sport;
+
+public class TennisNews extends News {
+    private String competition;
+    private String tennisPlayers;
+
+    public TennisNews(String headline, String text, double scoring, double price, String competition, String tennisPlayers) {
+        super(headline, text, scoring, price);
+        this.competition = competition;
+        this.tennisPlayers = tennisPlayers;
+    }
+
+    @Override
+    public double calculatePriceNews() {
+        double price = 150;
+        if (tennisPlayers.equalsIgnoreCase("Federer") ||
+                tennisPlayers.equalsIgnoreCase("Nadal") ||
+                tennisPlayers.equalsIgnoreCase("Djokovic")) {
+
+            price += 100;
+        }
+
+        return price;
+    }
+
+    @Override
+    public int calculateScoring() {
+        int points = 4;
+        if (tennisPlayers.equalsIgnoreCase("Federer") ||
+                tennisPlayers.equalsIgnoreCase("Nadal") ||
+                tennisPlayers.equalsIgnoreCase("Djokovic")) {
+
+            points += 3;
+        }
+
+        return points;
+    }
+}
