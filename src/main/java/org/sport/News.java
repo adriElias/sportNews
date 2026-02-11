@@ -47,6 +47,6 @@ public abstract class News {
     }
 
     public abstract double calculatePriceNews();
-    public abstract double calculateScoring();
+    public abstract int calculateScoring();
 
 }

@@ -14,13 +14,25 @@ public class TennisNews extends News {
     public double calculatePriceNews() {
         double price = 150;
         if (tennisPlayers.equalsIgnoreCase("Federer") ||
-            tennisPlayers.equalsIgnoreCase("Nadal") ||
-            tennisPlayers.equalsIgnoreCase("Djokovic")) {
+                tennisPlayers.equalsIgnoreCase("Nadal") ||
+                tennisPlayers.equalsIgnoreCase("Djokovic")) {
 
             price += 100;
         }
 
         return price;
+    }
 
+    @Override
+    public int calculateScoring() {
+        int points = 4;
+        if (tennisPlayers.equalsIgnoreCase("Federer") ||
+                tennisPlayers.equalsIgnoreCase("Nadal") ||
+                tennisPlayers.equalsIgnoreCase("Djokovic")) {
+
+            points += 3;
+        }
+
+        return points;
     }
 }

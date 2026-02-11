@@ -24,8 +24,8 @@ public class BasketballNews extends News {
     }
 
     @Override
-    public double calculateScoring() {
-        double points = 4;
+    public int calculateScoring() {
+        int points = 4;
 
         if (competition.equalsIgnoreCase("Euro League")) {
             points += 3;

@@ -30,9 +30,9 @@ public class FootballNews extends News {
     }
 
     @Override
-    public double calculateScoring() {
+    public int calculateScoring() {
 
-        double points = 5;
+        int points = 5;
 
         if (competition.equalsIgnoreCase("Champions League")) {
             points += 3;
