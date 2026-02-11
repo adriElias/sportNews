@@ -16,6 +16,15 @@ public class MotorcyclingNews extends News {
         }
 
         return price;
+    }
 
+    @Override
+    public int calculateScoring() {
+        int points = 3;
+        if (team.equalsIgnoreCase("Honda") || team.equalsIgnoreCase("Yamaha")) {
+            points += 3;
+        }
+
+        return points;
     }
 }
