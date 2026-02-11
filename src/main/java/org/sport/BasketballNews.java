@@ -19,7 +19,24 @@ public class BasketballNews extends News {
         if (club.equalsIgnoreCase("Barça") || club.equalsIgnoreCase("Madrid")) {
             price += 75;
         }
-        return price;
 
+        return price;
+    }
+
+    @Override
+    public double calculateScoring() {
+        double points = 4;
+
+        if (competition.equalsIgnoreCase("Euro League")) {
+            points += 3;
+        }
+        if (competition.equalsIgnoreCase("ACB League")) {
+            points += 2;
+        }
+        if (club.equalsIgnoreCase("Barça") || club.equalsIgnoreCase("Madrid")) {
+            points += 1;
+        }
+
+        return points;
     }
 }
