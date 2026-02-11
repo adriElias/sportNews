@@ -17,6 +17,16 @@ public class F1News extends News {
         }
 
         return price;
+    }
 
+    @Override
+    public int calculateScoring() {
+        int points = 4;
+        if (motorRacingTeam.equalsIgnoreCase("Ferrari") ||
+                motorRacingTeam.equalsIgnoreCase("Mercedes")) {
+            points += 2;
+        }
+
+        return points;
     }
 }
