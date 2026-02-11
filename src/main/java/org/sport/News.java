@@ -47,4 +47,6 @@ public abstract class News {
     }
 
     public abstract double calculatePriceNews();
+    public abstract double calculateScoring();
+
 }

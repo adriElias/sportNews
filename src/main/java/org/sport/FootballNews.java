@@ -28,4 +28,25 @@ public class FootballNews extends News {
         }
         return price;
     }
+
+    @Override
+    public double calculateScoring() {
+
+        double points = 5;
+
+        if (competition.equalsIgnoreCase("Champions League")) {
+            points += 3;
+        }
+        if (competition.equalsIgnoreCase("League")) {
+            points += 2;
+        }
+        if (club.equalsIgnoreCase("Barça") || club.equalsIgnoreCase("Madrid")) {
+            points += 1;
+        }
+        if (player.equalsIgnoreCase("Ferran Torres") || player.equalsIgnoreCase("Benzema")) {
+            points += 1;
+        }
+
+        return points;
+    }
 }
