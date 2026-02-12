@@ -5,7 +5,7 @@ public class Editor {
     private String name;
     private static double salary = 1500;
 
-    public Editor(String DNI, String name, double salary){
+    public Editor(String DNI, String name){
         this.DNI = DNI;
         this.name = name;
     }
